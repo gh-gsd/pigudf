@@ -1,0 +1,9 @@
+Testsuite: com.gsd.pig.udf.UnitTestSuite
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.108 sec
+------------- Standard Output ---------------
+aaa
+------------- ---------------- ---------------
+
+Testcase: test_param01が取得できること took 0.09 sec
+Testcase: test_urlが取得できること took 0 sec
+Testcase: test_param02が取得できること took 0 sec

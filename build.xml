@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="datamining" default="default" basedir=".">
+
+	<property name="src" value="src" />
+	<property name="dst" value="build/classes" />
+	<property name="jardst" value="jar" />
+	<property name="lib" value="lib" />
+
+	<property name="test" value="test" />
+	<property name="test.src" value="${test}/src" />
+	<property name="test.lib" value="${test}/lib" />
+	<property name="test.dst" value="${test}/classes" />
+	<property name="test.report" value="${test}/report" />
+
+	<target name="default">
+		<echo>No target was specified. Please specify target. 
+jar.build | test.unit</echo>
+	</target>
+
+	<!-- =================================
+	build PigUDF
+	================================= -->
+	<path id="classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<target name="udf.build">
+		<delete>
+			<fileset dir="${dst}" includes="**/*.class" />
+		</delete>
+		<javac includeantruntime="false" srcdir="${src}" destdir="${dst}">
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	<!-- =================================
+	make PigUDF jarfile
+	================================= -->
+	<target name="jar.build" depends="udf.build">
+		<jar jarfile="${jardst}/myudfs.jar" basedir="${dst}" update="true" />
+	</target>
+
+	<!-- =================================
+	Unit Test
+	================================= -->
+	<path id="test.classpath">
+		<fileset dir="${test.lib}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement path="${dst}" />
+		<pathelement path="${test.dst}" />
+	</path>
+	<target name="test.build" depends="udf.build">
+		<delete>
+			<fileset dir="${test.dst}" includes="**/*Test.class" />
+		</delete>
+		<javac includeantruntime="false" srcdir="${test.src}" destdir="${test.dst}">
+			<classpath refid="test.classpath" />
+		</javac>
+	</target>
+
+	<target name="test.unit" depends="test.build">
+		<junit haltonfailure="true" printsummary="true">
+			<formatter type="plain" />
+			<classpath refid="test.classpath" />
+			<batchtest fork="yes" todir="${test.report}">
+				<fileset dir="${test.src}">
+					<include name="**/UnitTestSuite.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+		<echo>All Unit Test complete!</echo>
+	</target>
+</project>
