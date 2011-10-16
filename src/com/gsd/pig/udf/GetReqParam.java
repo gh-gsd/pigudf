@@ -12,13 +12,14 @@ import org.apache.pig.impl.logicalLayer.schema.Schema;
 import org.apache.pig.impl.logicalLayer.FrontendException;
 
 /**
- * GetParam implements eval function to get search term or url from request log.
+ * GetReqParam implements eval function to get request parameter from Apache log.
+ * ApacheログのリクエストURLから指定したパラメータを取得する
  * Example:<code>
- *      A = load 'mydata' as (request);
- *      B = foreach A generate GetParam(request,'url');
- * 第一引数：リクエストURI
+ *      A = load 'mydata' using PigStrage() as request;
+ *      B = foreach A generate GetReqParam(request,'url');
+ * 第一引数：リクエストURL
  * 第二引数：取り出したいパラメータ
- * @author ota
+ * @author gsd
  * 
  */
 public class GetReqParam extends EvalFunc<String>
@@ -49,7 +50,7 @@ public class GetReqParam extends EvalFunc<String>
 
 	/**
 	 * リクエストURIからパラメータを取得するメソッド 
-	 * @param リクエストURI,url等のリクエストパラメータ
+	 * @param リクエストURL,url等のリクエストパラメータ
 	 * @exception java.io.IOException
 	 */
 	public String get(String request,String param) throws IOException{
