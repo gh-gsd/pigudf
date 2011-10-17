@@ -1,0 +1,7 @@
+pigでregisterして使うUDFです。
+
+現在使えるクラスは
+・GetReqParam
+です。
+
+このクラスの使い方についてはsample、javadocを参照してください。
