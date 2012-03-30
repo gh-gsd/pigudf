@@ -26,6 +26,7 @@ jar.build | test.unit</echo>
 		</fileset>
 	</path>
 	<target name="udf.build">
+		<mkdir dir="${dst}" />
 		<delete>
 			<fileset dir="${dst}" includes="**/*.class" />
 		</delete>
