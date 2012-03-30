@@ -15,7 +15,7 @@ import org.apache.pig.backend.executionengine.ExecException;
  * Example:<code>
  *	  A = load 'mydata' as (data:double);
  *	  B = group A all;
- *	  C = foreach A generate Variance(A.data);
+ *	  C = foreach B generate Variance(A.data);
  * @author ota
  * 
  */
