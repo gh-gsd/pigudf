@@ -16,8 +16,6 @@ import org.apache.pig.backend.executionengine.ExecException;
  *	  A = load 'mydata' as (data:double);
  *	  B = group A all;
  *	  C = foreach A generate Variance(A.data);
- * 第一引数：リクエストURI
- * 第二引数：取り出したいパラメータ
  * @author ota
  * 
  */
