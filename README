@@ -1,19 +1,9 @@
 pigでregisterして使うUDFです。
 
 現在使えるクラスは
-・GetReqParam
+・GetReqParam(ApacheログのリクエストURLから指定したパラメータを取得)
+・Variance(分散を計算）
 です。
 
-*** GetReqParamクラス ***
+詳細はjavadoc
 
-  ApacheログのリクエストURLから指定したパラメータを取得する
-  Example:
-    A = load 'mydata' using PigStrage() as request;
-    B = foreach A generate GetReqParam(request,'url');
-  第一引数：リクエストURL
-  第二引数：取り出したいパラメータ
-
-  例えばApacheログのリクエストが以下の場合。
-  hogehoge&url=http://newsbuzz.jp/&param=aaa
-
-  GetReqParam(request,'param')とすると、aaaが返ってきます。
