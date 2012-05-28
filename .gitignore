@@ -1,1 +1,5 @@
 build/
+.classpath
+.project
+._*
+.DS_Store

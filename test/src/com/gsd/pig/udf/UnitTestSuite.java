@@ -14,7 +14,9 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 
 @SuiteClasses( { 
-	GetReqParamTest.class
+	GetReqParamTest.class,
+	RoundOffTest.class,
+	DateTimeConverterTest.class
 })
 public class UnitTestSuite {
 	public static void main(String[] args) {

@@ -14,11 +14,13 @@ import org.apache.pig.impl.logicalLayer.FrontendException;
 /**
  * GetReqParam implements eval function to get request parameter from Apache log.
  * ApacheログのリクエストURLから指定したパラメータを取得する
- * Example:<code>
+ * <div>
+ * Example:<div><code>
  *      A = load 'mydata' using PigStrage() as request;
- *      B = foreach A generate GetReqParam(request,'url');
- * 第一引数：リクエストURL
- * 第二引数：取り出したいパラメータ
+ *      B = foreach A generate GetReqParam(request,'url');</code></div>
+ * <ul><li>第一引数：リクエストURL</li>
+ * <li>第二引数：取り出したいパラメータ</li><ul>
+ * </div>
  * @author gsd
  * 
  */

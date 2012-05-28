@@ -3,6 +3,8 @@ pigでregisterして使うUDFです。
 現在使えるクラスは
 ・GetReqParam(ApacheログのリクエストURLから指定したパラメータを取得)
 ・Variance(分散を計算）
+・RoundOff(小数点第5位）
+・DateTimeConverter（UnixTimeをyyyymmddに変換）
 です。
 
 詳細はjavadoc
