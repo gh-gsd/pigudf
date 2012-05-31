@@ -3,3 +3,4 @@ build/
 .project
 ._*
 .DS_Store
+*.class

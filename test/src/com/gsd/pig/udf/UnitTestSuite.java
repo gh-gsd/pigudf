@@ -16,7 +16,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses( { 
 	GetReqParamTest.class,
 	RoundOffTest.class,
-	DateTimeConverterTest.class
+	DateTimeConverterTest.class,
+	ParseSearchTermTest.class 
 })
 public class UnitTestSuite {
 	public static void main(String[] args) {

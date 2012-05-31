@@ -1,13 +1,21 @@
 Testsuite: com.gsd.pig.udf.UnitTestSuite
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
+Tests run: 9, Failures: 0, Errors: 0, Time elapsed: 0.141 sec
 ------------- Standard Output ---------------
 aaa
 23.74659
 2012022211
+{(あいうえお,1),(かきくけこ,1)}
+{(あいうえお,1),(かきくけこ,1)}
+{(あいうえお,1)}
+{(,1)}
 ------------- ---------------- ---------------
 
-Testcase: test_param01が取得できること took 0.085 sec
+Testcase: test_param01が取得できること took 0.084 sec
 Testcase: test_urlが取得できること took 0 sec
-Testcase: test_param02が取得できること took 0 sec
+Testcase: test_param02が取得できること took 0.001 sec
 Testcase: test_少数第5位で四捨五入できること took 0.003 sec
 Testcase: test_UNIXTIMEを変換できること took 0.001 sec
+Testcase: Bagで2つ返ってくること took 0.024 sec
+Testcase: 全角スペースでもBagで2つ返ってくること took 0 sec
+Testcase: Bagでひとつ返ること took 0.001 sec
+Testcase: 空白が返ること took 0 sec
