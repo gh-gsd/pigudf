@@ -5,6 +5,7 @@ pigでregisterして使うUDFです。
 ・Variance(分散を計算）
 ・RoundOff(小数点第5位）
 ・DateTimeConverter（UnixTimeをyyyymmddに変換）
+・ParseSearchTerm(スペース区切りの語句をバッグに格納）
 です。
 
 詳細はjavadoc
