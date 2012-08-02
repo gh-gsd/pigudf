@@ -65,6 +65,7 @@ jar.build | test.unit</echo>
 	</target>
 
 	<target name="test.unit" depends="test.build">
+		<mkdir dir="${test.report}" />
 		<junit haltonfailure="true" printsummary="true">
 			<formatter type="plain" />
 			<classpath refid="test.classpath" />
