@@ -13,9 +13,9 @@ import org.apache.pig.backend.executionengine.ExecException;
 /**
  * Variance implements eval function to calculate variance of input tuple.
  * <div>Example:<div><code>
- *	  A = load 'mydata' as (data:double);
- *	  B = group A all;
- *	  C = foreach B generate Variance(A.data);</code></dev>
+ *	  A = load 'mydata' as (data:double);<br />
+ *	  B = group A all;<br />
+ *	  C = foreach B generate Variance(A.data);<br /></code></dev>
  * </div>
  * @author ota
  * 

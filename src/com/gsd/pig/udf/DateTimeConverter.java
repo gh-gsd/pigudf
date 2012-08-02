@@ -15,9 +15,9 @@ import org.apache.pig.impl.logicalLayer.schema.Schema;
 /**
  * DateTimeConverter implements eval function to convert unix time to yyyymmdd.
  * <div>Example:<div><code>
- *	  A = load 'mydata' as (unixtime:chararray);
- *	  B = foreach A generate DateTimeConverter(unixtime);</code></div></div>
- * @author ota
+ *	  A = load 'mydata' as (unixtime:chararray);<br />
+ *	  B = foreach A generate DateTimeConverter(unixtime);<br /></code></div></div>
+ * @author gsd
  * 
  */
 public class DateTimeConverter extends EvalFunc<String>{

@@ -6,6 +6,7 @@ pigでregisterして使うUDFです。
 ・RoundOff(小数点第5位）
 ・DateTimeConverter（UnixTimeをyyyymmddに変換）
 ・ParseSearchTerm(スペース区切りの語句をバッグに格納）
+・ParseBag(バッグの中身を任意の区切り文字で出力）
 です。
 
 詳細はjavadoc

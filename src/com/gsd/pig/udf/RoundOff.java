@@ -14,8 +14,8 @@ import org.apache.pig.impl.logicalLayer.schema.Schema;
 /**
  * RoundOff implements eval function to rounding off a double value.
  * <div>Example:<div><code>
- *	  A = load 'mydata' as (value:double);
- *	  B = foreach A generate RoundOff(value);</code></div></div>
+ *	  A = load 'mydata' as (value:double);<br />
+ *	  B = foreach A generate RoundOff(value);<br /></code></div></div>
  * @author ota
  * 
  */

@@ -16,12 +16,12 @@ import org.apache.pig.impl.logicalLayer.FrontendException;
  * ApacheログのリクエストURLから指定したパラメータを取得する
  * <div>
  * Example:<div><code>
- *      A = load 'mydata' using PigStrage() as request;
- *      B = foreach A generate GetReqParam(request,'url');</code></div>
+ *      A = load 'mydata' using PigStrage() as request;<br />
+ *      B = foreach A generate GetReqParam(request,'url');<br /></code></div>
  * <ul><li>第一引数：リクエストURL</li>
  * <li>第二引数：取り出したいパラメータ</li><ul>
  * </div>
- * @author gsd
+ * @author ota
  * 
  */
 public class GetReqParam extends EvalFunc<String>

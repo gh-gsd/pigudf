@@ -4,3 +4,5 @@ build/
 ._*
 .DS_Store
 *.class
+jar/
+test/report/*
